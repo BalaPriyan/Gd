@@ -1,10 +1,10 @@
 class config:
-    BOT_TOKEN = ""
-    APP_ID = ""
-    API_HASH = ""
-    DATABASE_URL = ""
-    SUDO_USERS = "" # Sepearted by space.
-    SUPPORT_CHAT_LINK = ""
+    BOT_TOKEN = "6371839943:AAHWayxF5o6myFNiTGjR_iZMRHy3HQjOPSQ"
+    APP_ID = "14142245"
+    API_HASH = "aecbe5f3d18bc8eed18121063e6c1a24"
+    DATABASE_URL = "postgres://gdtd:ECevtVvtK530c4fpik3SEaJ7MeXmg48F@dpg-co8eo1f109ks73edcn3g-a.oregon-postgres.render.com/gdtd"
+    SUDO_USERS = "6697298553" # Sepearted by space.
+    SUPPORT_CHAT_LINK = "https://t.me/TomenBots"
     DOWNLOAD_DIRECTORY = "./downloads/"
 
 
