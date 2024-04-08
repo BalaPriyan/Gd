@@ -1,6 +1,6 @@
 wget
 asyncio
-git+https://github.com/KurimuzonAkuma/pyrogram.git
+pyrogram
 tgcrypto
 oauth2client
 psycopg2-binary
