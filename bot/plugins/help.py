@@ -3,14 +3,14 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from bot.config import Messages as tr
 
-@app.on_message(filters.private & filters.command("start"))
+@Client.on_message(filters.private & filters.command("start"))
 async def start(client, message):
     await client.send_message(
         chat_id=message.chat.id,
         text=tr.START_MSG.format(message.from_user.mention),
     )
 
-@app.on_message(filters.private & filters.command("help"))
+@Client.on_message(filters.private & filters.command("help"))
 async def help(client, message):
     await client.send_message(
         chat_id=message.chat.id,
@@ -19,7 +19,7 @@ async def help(client, message):
         reply_to_message_id=message.message_id,
     )
 
-@app.on_callback_query(filters.regex("^help_"))
+@Client.on_callback_query(filters.regex("^help_"))
 async def help_answer(client, callback_query):
     msg = int(callback_query.data.split("_")[1])
     await callback_query.edit_message_text(
