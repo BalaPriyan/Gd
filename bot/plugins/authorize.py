@@ -74,7 +74,9 @@ async def _token(client, message):
 
     if WORD == 73 and token[1] == "/":
         creds = None
+        sent_message = None
         global flow
+        
         if flow:
             try:
                 user_id = message.from_user.id
@@ -89,4 +91,4 @@ async def _token(client, message):
             except Exception as e:
                 await sent_message.edit(f"**ERROR:** ```{e}```")
         else:
-            await sent_message.edit(Messages.FLOW_IS_NONE, quote=True)
+            await message.reply_text(Messages.FLOW_IS_NONE)  # Handle if flow is None
