@@ -66,7 +66,7 @@ async def _token(client, message):
     try:
         code = message.text.split("?code=")[1].split("&")[0]
     except IndexError:
-        await message.reply_text("Invalid code format. Please provide a valid authorization code.")
+        await message.reply_text("Invalid code format. Please provide a valid authorization code.", parse_mode=None)
         return
 
     token = code.split()[-1]
